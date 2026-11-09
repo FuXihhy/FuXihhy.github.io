@@ -16,32 +16,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       pages: read
     steps:
       - name: Check out source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - name: Import initial source snapshot
-        if: ${{ hashFiles('package.json') == '' }}
-        run: |
-          curl --fail --location --retry 3 'https://github.com/FuXihhy/FuXihhy.github.io/releases/download/initial-source/haiyang-homepage-source.zip' -o "$RUNNER_TEMP/homepage-source.zip"
-          python3 - <<'PYTHON'
-          import hashlib, os, zipfile
-          from pathlib import Path
-          archive = Path(os.environ['RUNNER_TEMP']) / 'homepage-source.zip'
-          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '44a935a6bdc4f634d0b03340aab690f415c90086bbcace248e11c8003eda83c8'
-          with zipfile.ZipFile(archive) as source:
-              for item in source.infolist():
-                  parts = Path(item.filename).parts
-                  assert not Path(item.filename).is_absolute() and '..' not in parts
-                  if parts[0] != '.github':
-                      source.extract(item, '.')
-          PYTHON
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md .gitignore content docs/CONTENT.md index.html notes package.json package-lock.json playwright.config.ts public scripts src tests tsconfig.json vite.config.ts
-          git commit -m 'Import academic homepage and original note files'
-          git push origin HEAD:main
       - name: Set up Node
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
