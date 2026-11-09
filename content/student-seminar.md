@@ -34,7 +34,7 @@ Regarding the tedious proof of chapter 1.2 convex polyhedral cone, and basic sup
 
 *July 11, 2026*
 
-Vector bundles, Grothendieck functor, and Bott periodicity; following Hatcher.
+From Grothendieck functor we defined the K-group. Then we carefully proved the Fundamental Product Theorem, which gives the Bott periodicity for complex K-theory. Hopefully I will relate it with the representation of Clifford algebra in coming talks.
 
 ### [Infinitesimal Deformation of Complex Structure](https://www.youtube.com/watch?v=539dNOsb4jw)
 
