@@ -1,0 +1,11 @@
+@import 'katex/dist/katex.min.css';
+
+/* Built with the HTML, so math and local fonts also work without JavaScript. */
+.katex{font-size:1.05em;overflow-wrap:normal}
+.math-display{max-inline-size:100%;min-inline-size:0;margin-block:1em;
+  padding-block:.25em;overflow-x:auto;overscroll-behavior-inline:contain}
+.math-display .katex-block{margin:0}
+.math-display .katex-display{inline-size:max-content;min-inline-size:100%;margin:0}
+.math-display:focus-visible{outline:2px solid var(--harbor,currentColor);outline-offset:2px}
+.entry-description:has(.math-display){min-inline-size:0}
+.katex-error{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}

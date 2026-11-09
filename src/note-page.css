@@ -1,0 +1,44 @@
+.note-shell{max-width:868px;margin-inline:auto;padding-inline:24px}
+.note-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  padding-block:26px 18px;border-bottom:1px solid var(--rule)}
+.note-site-name{font-weight:650;color:var(--ink);text-decoration:none}
+.note-header nav,.note-footer{font-size:.875rem}
+.note-main{padding-top:30px}
+.note-main h1{margin:0 0 16px;font:700 1.875rem/1.25 var(--sans);
+  letter-spacing:-.025em;text-wrap:balance}
+#note-content>p{max-width:76ch;color:var(--ink-2)}
+#note-content h2{margin:30px 0 8px;padding-top:20px;border-top:1px solid var(--rule-2);
+  font-size:1.1875rem}
+#note-content h3{font-size:1.0625rem;margin:20px 0 8px}
+#note-content ul,#note-content ol{padding-inline-start:24px}
+#note-content img{display:block;max-width:100%;height:auto}
+.note-pdf-block{margin-top:12px}
+.document-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;
+  padding-bottom:12px;font-size:.875rem}
+.document-actions a,.document-actions button{min-height:32px;display:inline-flex;align-items:center}
+.document-actions button{padding:4px 12px;border:1px solid var(--rule-2);border-radius:3px;
+  background:var(--paper-3);color:var(--ink);font:inherit;cursor:pointer}
+.document-actions button:hover{background:var(--paper-2);border-color:var(--harbor)}
+.document-actions button[hidden]{display:none}
+.document-thumbnail{margin:0;padding:16px;background:var(--paper-2);border:1px solid var(--rule)}
+.document-thumbnail img{width:100%;max-width:438px;aspect-ratio:auto 1000 / 1415;margin-inline:auto;
+  border:1px solid var(--rule-2);box-shadow:0 2px 5px rgb(34 39 43 / .06)}
+.document-thumbnail[hidden]{display:none}
+.note-pdf-frame{display:block;width:100%;height:80vh;min-height:420px;max-height:900px;
+  border:1px solid var(--rule-2);background:white}
+.note-footer{margin-top:32px;padding-block:16px 32px;border-top:1px solid var(--rule)}
+@media(max-width:600px){
+  .note-shell{padding-inline:24px}
+  .note-header{padding-top:18px;gap:12px;font-size:.875rem}
+  .note-header nav{font-size:.8125rem}
+  .note-main{padding-top:24px}
+  .note-main h1{font-size:1.625rem}
+  .document-actions{gap:8px 16px}
+  .document-thumbnail{padding:8px}
+  .note-pdf-frame{min-height:400px;height:70vh}
+}
+@media print{
+  .note-header nav,.document-actions button,.note-footer{display:none}
+  .note-shell{max-width:none;padding:0}
+  .document-thumbnail{break-inside:avoid}
+}

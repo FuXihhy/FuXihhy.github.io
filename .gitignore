@@ -1,0 +1,17 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.local
+
+
+qa/
+
+# Local design history and verification evidence.
+docs/*
+!docs/CONTENT.md
+assets-src/

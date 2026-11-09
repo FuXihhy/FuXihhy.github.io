@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Academic homepage — personal content to be added." />
+    <title>Haiyang Huang · Academic homepage</title>
+    <link rel="stylesheet" href="/src/math.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/02-head-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/02-head-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/icons/02-head-48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/02-head-180.png" />
+    <noscript><style>.masthead .actions{display:block!important}.quicknav{display:flex!important;flex-wrap:wrap}.contents-btn{display:none!important}.masthead{position:static!important;display:block!important}</style></noscript>
+  </head>
+  <body>
+    <a class="skip" href="#about-title">Skip to main content</a>
+    <div class="shell" id="top">
+      <header class="masthead">
+        <div class="id">
+          <div class="identity-copy">
+            <h1 id="person-name" tabindex="-1">[Name]</h1>
+            <p id="person-local-name" class="local-name"></p>
+            <p id="person-role" class="role">[Affiliation]</p>
+          </div>
+          <a class="photo-link photo-link--masthead" href="%BASE_URL%images/me.jpg" aria-label="Photo of Haiyang Huang (full size)">Photo</a>
+        </div>
+        <div class="actions">
+          <nav class="quicknav" aria-label="Sections">
+            <a href="#about" aria-current="location">About</a><a href="#research">Research</a><a href="#notes">Notes &amp; Student Seminar</a><a href="#miscellany">Miscellany</a>
+          </nav>
+          <button class="contents-btn" type="button" aria-haspopup="dialog" aria-controls="contents-sheet">Contents <span aria-hidden="true">≡</span></button>
+          <div id="companion-header"></div>
+        </div>
+      </header>
+      <div class="contents-track">
+          <nav class="contents" aria-labelledby="contents-label">
+            <p class="kicker" id="contents-label">Contents</p>
+            <ol>
+              <li><a href="#about" aria-current="location">About</a></li>
+              <li><a href="#research">Research</a></li>
+              <li><a href="#notes">Notes &amp; Student Seminar</a></li>
+              <li><a href="#miscellany">Miscellany</a></li>
+            </ol>
+          </nav>
+      </div>
+      <div class="apparatus-track">
+        <aside class="apparatus" aria-label="Page companion">
+          <div id="companion-dock"></div>
+        </aside>
+      </div>
+      <main class="sections" id="main">
+        <section class="section" id="about">
+          <div class="about-heading">
+            <h2 id="about-title" tabindex="-1">About</h2>
+            <a class="photo-link photo-link--about" href="%BASE_URL%images/me.jpg" aria-label="Photo of Haiyang Huang (full size)">Photo</a>
+          </div>
+          <div id="about-copy" class="markdown-body empty">Introduction to be added.</div>
+        </section>
+        <section class="section" id="research">
+          <h2 id="research-title" tabindex="-1">Research</h2>
+          <div id="research-copy" class="markdown-body"></div>
+        </section>
+        <section class="section" id="notes">
+          <h2 id="notes-title" tabindex="-1">Notes &amp; Student Seminar</h2>
+          <div class="sub"><h3>Notes</h3><div id="notes-intro" class="group-intro markdown-body"></div><div id="notes-list" class="markdown-body"></div></div>
+          <div class="sub"><h3>Student Seminar</h3><div id="student-seminar-intro" class="group-intro markdown-body"></div><div id="student-seminars-list" class="markdown-body"></div></div>
+        </section>
+        <section class="section" id="miscellany">
+          <h2 id="miscellany-title" tabindex="-1">Miscellany</h2>
+          <div id="miscellany-copy" class="markdown-body"></div>
+        </section>
+        <footer class="page-footer">
+          <p>Personal homepage</p>
+          <a class="top" href="#top">Back to top ↑</a>
+        </footer>
+      </main>
+    </div>
+    <dialog class="sheet" id="contents-sheet" aria-labelledby="contents-title">
+      <div class="sheet-inner">
+        <h2 id="contents-title">Contents</h2>
+        <button class="sheet-close" type="button" aria-label="Close contents">×</button>
+        <nav class="contents-sheet-links" aria-label="Sections">
+          <a href="#about"><span>About<small>The page and its owner.</small></span></a>
+          <a href="#research"><span>Research<small>Interests and current work.</small></span></a>
+          <a href="#notes"><span>Notes &amp; Student Seminar<small>Working notes and student seminars.</small></span></a>
+          <a href="#miscellany"><span>Miscellany<small>Small tools and curiosities.</small></span></a>
+        </nav>
+      </div>
+    </dialog>
+    <p class="sr-only" id="live" aria-live="polite" aria-atomic="true"></p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "personal-academic-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "check": "tsc --noEmit && npm run check:content && npm run test:render",
+    "check:content": "node scripts/check-content.mjs",
+    "build": "npm run check && vite build",
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:render": "node --test scripts/render-content.test.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@mdit/plugin-katex": "1.1.5",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "katex": "0.19.1",
+    "markdown-it": "15.0.3",
+    "parse5": "8.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
+  }
+}

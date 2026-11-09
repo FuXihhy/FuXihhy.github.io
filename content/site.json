@@ -1,0 +1,19 @@
+{
+  "name": "Haiyang Huang",
+  "nameLocal": "",
+  "role": "Undergraduate student in physics",
+  "affiliation": "Fudan University",
+  "companion": {
+    "image": "assets/02-red-hd2x-idle.png",
+    "label": "02",
+    "description": "02 in a red uniform, in a chibi style, holding a lollipop.",
+    "enabled": true,
+    "sprite": {
+      "image": "assets/02-red-hd2x-sprites.webp",
+      "columns": 8,
+      "rows": 11,
+      "frameWidth": 384,
+      "frameHeight": 416
+    }
+  }
+}
